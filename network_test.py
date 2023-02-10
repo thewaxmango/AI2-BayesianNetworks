@@ -58,5 +58,6 @@ def main():
     print(model.get_given_probability(("A", False), {"B":True, "E":False}))     # Odds of Alarm = False, given Burglary = True & Earthquake = True
     print(model.get_given_probability(("B", True), {"J":True, "M":True}))       # Odds of Burglary = True, given JohnCalls = True & MaryCalls = True
 
+    
 if __name__ == "__main__":                              # Only executes main() if this file is the one being ran 
     main()                                              # If this file is imported, main() will not run
