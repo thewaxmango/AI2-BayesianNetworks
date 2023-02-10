@@ -38,16 +38,16 @@ def main():
 
     JC_Parents = ["A"]
     JC_Problt = [((True, True), 0.90),
-                        ((True, False), 0.10),
-                        ((False, True), 0.05),
-                        ((False, False), 0.95)]
+                 ((True, False), 0.10),
+                 ((False, True), 0.05),
+                 ((False, False), 0.95)]
     JohnCalls = ("J", (JC_Problt, JC_Parents))          # Conditional Probabilities of JohnCalls
 
     MC_Parents = ["A"]
     MC_Problt = [((True, True), 0.70),
-                        ((True, False), 0.30),
-                        ((False, True), 0.01),
-                        ((False, False), 0.99)]
+                 ((True, False), 0.30),
+                 ((False, True), 0.01),
+                 ((False, False), 0.99)]
     MaryCalls = ("M", (MC_Problt, MC_Parents))          # Conditional Probabilities of MaryCalls
 
     model = BayesianTree()                                                      # Create Bayesian Network
