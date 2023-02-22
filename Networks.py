@@ -57,7 +57,9 @@ class BayesianTree:                                             # Can find proba
 
         return with_state / without_state                       # Final probability = (Successful cases)/(Total cases)
     
-    # If you need more than one state before the given (ex. P(A,B|C)), use the following
+    # If you need more than one state before the given (ex. P(A,B|C)), use the following.
+    # Syntax for States is the same as Constraints
+    # Note: States IS NOT State, is a dict instead of a tuple
     
     # replace line 49
     # def get_given_probability(self, states: dict, constraints: dict) -> float:
