@@ -46,7 +46,7 @@ class BayesianTree:                                             # Can find proba
     # See previous method for Constraints
     # -------------------------------------------
 
-    def get_given_probability(self, state: tuple, constraints: dict) -> float:      # Finding probability of a state given constraints
+    def get_given_probability(self, state: tuple, constraints: dict) -> float:      # Finding probability of a state given constraints (only handles one state)
         # node = self.nodes[state[0]]
         # if node.is_discrete:                                  # Checks if the given state is discrete
         #     return node.disc_prob[state[1]]                   # < Used for efficiency in edge case
@@ -57,7 +57,15 @@ class BayesianTree:                                             # Can find proba
 
         return with_state / without_state                       # Final probability = (Successful cases)/(Total cases)
     
-
+    # If you need more than one state before the given (ex. P(A,B|C)), use the following
+    
+    # replace line 49
+    # def get_given_probability(self, states: dict, constraints: dict) -> float:
+    
+    # replace line 55
+    # constraints.update(states)
+    
+    
     def get_cases(self, constraints: dict) -> list:             # Generates all possible cases given constraints
         cases = [{}]
 
